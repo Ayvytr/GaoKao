@@ -1,0 +1,95 @@
+//def isLib = false
+if (isLib) {
+    apply plugin: 'com.android.library'
+} else {
+    apply plugin: 'com.android.application'
+}
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        multiDexEnabled true
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    androidExtensions {
+        experimental = true
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    api deps.support.appcompat_v7
+    api deps.support.recyclerview
+    api deps.support.constraint
+    api deps.support.design
+    api deps.support.cardview
+
+    api deps.rxjava2
+    api(deps.rxjava2_android) {
+        exclude module: "rxjava"
+    }
+    api deps.rxlifecycle2_components
+
+    api deps.glide
+
+    api deps.kotlin.kotlin_jdk7
+    api deps.kotlin.anko
+    api deps.kotlin.anko_commons
+
+    api deps.kotlin.ktx
+
+    api deps.logger
+    api deps.junit
+    api deps.testRunner
+    api deps.espresso
+
+    api deps.agentweb
+    api deps.arouter
+    api deps.smartrefresh
+    api deps.photoview
+    api deps.andpermission
+    api deps.customviews
+    api deps.statusbar
+
+    api deps.okhttp3
+    api deps.retrofit
+    api deps.retrofit_adapter_rxjava2
+    api deps.retrofit_converter_gson
+    api deps.okhttploginterceptor
+
+    api deps.network
+//    api deps.baseadapter
+//    api deps.mvp_baselist
+
+    api deps.mvp_baselist
+    api deps.kotlin.mvp_rxlifecycle_kotlin
+
+//    api project(":mvp-base")
+//    api project(":mvp-baselist")
+//    api project(":base-adapter")
+//    api project(":mvp-rxlifecycle")
+//    api (project(":mvp-rxlifecycle-kotlin")) {
+//        exclude group: 'android.arch.lifecycle', module: 'runtime'
+//    }
+
+    kapt deps.glide_compiler
+
+}

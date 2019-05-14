@@ -1,0 +1,19 @@
+include ':app', ':commonlibrary'
+
+//include ':mvp-base'
+//project(':mvp-base').projectDir = new File("../ModularizationComponent/mvp-base")
+//
+//include ':network'
+//project(':network').projectDir = new File("../ModularizationComponent/network")
+//
+//include ':mvp-rxlifecycle'
+//project(':mvp-rxlifecycle').projectDir = new File("../ModularizationComponent/mvp-rxlifecycle")
+//
+//include ':base-adapter'
+//project(':base-adapter').projectDir= new File("../ModularizationComponent/base-adapter")
+//
+//include ':mvp-baselist'
+//project(':mvp-baselist').projectDir = new File("../ModularizationComponent/mvp-baselist")
+//
+//include ':mvp-rxlifecycle-kotlin'
+//project(':mvp-rxlifecycle-kotlin').projectDir = new File("../ModularizationComponent/mvp-rxlifecycle-kotlin")
