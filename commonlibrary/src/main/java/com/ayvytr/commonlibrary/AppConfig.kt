@@ -1,6 +1,6 @@
 package com.ayvytr.commonlibrary
 
-import com.ayvytr.commonlibrary.bean.Subject
+import com.ayvytr.commonlibrary.bean.AppSubject
 
 /**
  * @author admin
@@ -11,15 +11,15 @@ object AppConfig {
     //base url
 
 
-    fun getSubjects(): ArrayList<Subject> = arrayListOf(
-        Subject(0, "语文"),
-        Subject(1, "数学"),
-        Subject(2, "英语"),
-        Subject(3, "物理"),
-        Subject(4, "化学"),
-        Subject(5, "生物"),
-        Subject(6, "历史"),
-        Subject(7, "地理"),
-        Subject(8, "政治")
+    fun getSubjects(): ArrayList<AppSubject> = arrayListOf(
+        AppSubject(0, "语文"),
+        AppSubject(1, "数学"),
+        AppSubject(2, "英语"),
+        AppSubject(3, "物理"),
+        AppSubject(4, "化学"),
+        AppSubject(5, "生物"),
+        AppSubject(6, "历史"),
+        AppSubject(7, "地理"),
+        AppSubject(8, "政治")
     )
 }

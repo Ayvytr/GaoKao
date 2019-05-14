@@ -8,7 +8,7 @@ import kotlinx.android.parcel.Parcelize
  */
 
 @Parcelize
-data class Subject(
+data class AppSubject(
     var id: Int? = null,
     var name: String? = null,
     var desc: String? = null
