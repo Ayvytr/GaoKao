@@ -80,7 +80,9 @@ dependencies {
 //    api deps.mvp_baselist
 
     api deps.mvp_baselist
-    api deps.kotlin.mvp_rxlifecycle_kotlin
+    api (deps.kotlin.mvp_rxlifecycle_kotlin ) {
+        exclude group: 'android.arch.lifecycle', module: 'runtime'
+    }
 
 //    api project(":mvp-base")
 //    api project(":mvp-baselist")
