@@ -1,2 +1,5 @@
 <resources>
+    <string name="home">首页</string>
+    <string name="more">更多</string>
+    <string name="mine">我的</string>
 </resources>

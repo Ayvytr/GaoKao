@@ -94,4 +94,6 @@ dependencies {
 
     kapt deps.glide_compiler
 
+    api 'com.sackcentury:shinebutton:0.2.0'
+
 }

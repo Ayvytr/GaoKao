@@ -1,4 +1,4 @@
-include ':app', ':commonlibrary'
+include ':app', ':commonlibrary', ':web'
 
 //include ':mvp-base'
 //project(':mvp-base').projectDir = new File("../ModularizationComponent/mvp-base")

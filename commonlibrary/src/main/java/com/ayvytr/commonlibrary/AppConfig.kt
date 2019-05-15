@@ -6,7 +6,8 @@ import com.ayvytr.commonlibrary.bean.AppSubject
  * @author admin
  */
 object AppConfig {
-    var isDebug = BuildConfig.DEBUG
+    @JvmField
+    val isDebug = BuildConfig.DEBUG
 
     //base url
 
