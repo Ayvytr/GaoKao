@@ -21,9 +21,5 @@ class MainActivity : AppCompatActivity() {
     private fun initView() {
         setSupportActionBar(findViewById(R.id.toolbar))
         mCurrentFragment = switchFragment(MainVpFragment::class.java, R.id.fl_main, mCurrentFragment)
-
-        ARouter.getInstance().build(WebConstant.WEB)
-            .withString(WebConstant.EXTRA_URL, "https://github.com/Ayvytr/KnowledgeHierarchy/blob/master/%E7%90%86%E7%A7%91.md")
-            .navigation(getContext())
     }
 }
