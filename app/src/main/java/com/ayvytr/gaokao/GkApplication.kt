@@ -21,5 +21,7 @@ class GkApplication : Application() {
         }
         ARouter.init(this)
         ApiClient.getInstance().init(applicationContext, "https://github.com/ayvytr/")
+
+        AppConfig.init(applicationContext)
     }
 }

@@ -2,8 +2,8 @@ package com.ayvytr.gaokao.fragment
 
 import android.os.Bundle
 import com.ayvytr.commonlibrary.constant.IntentConst
+import com.ayvytr.gaokao.MarkdownActivity
 import com.ayvytr.gaokao.R
-import com.ayvytr.gaokao.SubjectActivity
 import com.ayvytr.gaokao.adapter.MainFragmentAdapter
 import com.ayvytr.mvp.IPresenter
 import com.ayvytr.rxlifecycle.BaseMvpFragment
@@ -27,7 +27,7 @@ class MainFragment : BaseMvpFragment<IPresenter>() {
     override fun initView(savedInstanceState: Bundle?) {
         mAdapter = MainFragmentAdapter(context!!)
         mAdapter.setOnItemClickListener { view, holder, position ->
-            startActivity<SubjectActivity>(IntentConst.EXTRA_SUBJECT to mAdapter.getItemAt(position))
+            startActivity<MarkdownActivity>(IntentConst.EXTRA_SUBJECT to mAdapter.getItemAt(position))
         }
         rv_main.adapter = mAdapter
     }

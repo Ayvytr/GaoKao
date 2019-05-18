@@ -1,14 +1,16 @@
 package com.ayvytr.gaokao
 
 import android.os.Bundle
+import android.util.TypedValue
 import com.alibaba.android.arouter.launcher.ARouter
+import com.ayvytr.commonlibrary.AppConfig
 import com.ayvytr.commonlibrary.bean.AppSubject
 import com.ayvytr.commonlibrary.constant.IntentConst
 import com.ayvytr.commonlibrary.constant.WebConstant
 import com.ayvytr.mvp.IPresenter
 import com.ayvytr.network.ApiClient
 import com.ayvytr.rxlifecycle.BaseMvpActivity
-import kotlinx.android.synthetic.main.activity_subject_detail.*
+import kotlinx.android.synthetic.main.activity_markdown.*
 import ru.noties.markwon.AbstractMarkwonPlugin
 import ru.noties.markwon.Markwon
 import ru.noties.markwon.MarkwonConfiguration
@@ -21,7 +23,7 @@ import ru.noties.markwon.image.network.NetworkSchemeHandler
 import ru.noties.markwon.image.okhttp.OkHttpImagesPlugin
 
 
-class SubjectActivity : BaseMvpActivity<IPresenter>() {
+class MarkdownActivity : BaseMvpActivity<IPresenter>() {
     private lateinit var mAppSubject: AppSubject
 
     override fun initExtra() {
@@ -29,6 +31,8 @@ class SubjectActivity : BaseMvpActivity<IPresenter>() {
     }
 
     override fun initView(savedInstanceState: Bundle?) {
+        tv_content.setTextSize(TypedValue.COMPLEX_UNIT_SP, AppConfig.markdownFontSize().toFloat())
+
         val markwon = Markwon.builder(getContext())
             .usePlugin(object : AbstractMarkwonPlugin() {
                 override fun configureConfiguration(builder: MarkwonConfiguration.Builder) {
@@ -481,7 +485,7 @@ class SubjectActivity : BaseMvpActivity<IPresenter>() {
     }
 
     override fun getContentViewRes(): Int {
-        return R.layout.activity_subject_detail
+        return R.layout.activity_markdown
     }
 
     override fun initData(savedInstanceState: Bundle?) {

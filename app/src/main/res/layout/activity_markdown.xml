@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.ayvytr.gaokao.SubjectActivity">
+    tools:context="com.ayvytr.gaokao.MarkdownActivity">
 
     <include layout="@layout/layout_appbar" />
 
@@ -20,6 +20,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingBottom="@dimen/_80dp"
-            android:textSize="@dimen/_20sp" />
+            android:textSize="@dimen/_14sp" />
     </android.support.v4.widget.NestedScrollView>
 </LinearLayout>

@@ -26,7 +26,7 @@ class MainVpFragment : BaseMvpFragment<IPresenter>(), BottomNavigationView.OnNav
     }
 
     override fun initView(savedInstanceState: Bundle?) {
-        val fragments = arrayListOf(MainFragment(), MainFragment(), MainFragment())
+        val fragments = arrayListOf(MainFragment(), MainFragment(), MineFragment())
 
         vp.adapter = object : FragmentPagerAdapter(childFragmentManager) {
             override fun getCount(): Int {
