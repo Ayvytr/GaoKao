@@ -94,9 +94,12 @@ dependencies {
 
     kapt deps.glide_compiler
 
-    api 'com.sackcentury:shinebutton:0.2.0'
-
-    api 'com.github.tiagohm.MarkdownView:library:0.19.0'
     api "ru.noties.markwon:core:3.0.1"
+    api "ru.noties.markwon:ext-tables:3.0.1"
+    api "ru.noties.markwon:image-okhttp:3.0.1"
+    api "ru.noties.markwon:image-gif:3.0.1"
+    api "ru.noties.markwon:html:3.0.1"
+    api "ru.noties.markwon:ext-latex:3.0.1"
+    api "ru.noties.markwon:syntax-highlight:3.0.1"
 
 }
