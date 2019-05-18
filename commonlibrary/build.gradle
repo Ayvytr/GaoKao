@@ -8,6 +8,12 @@ apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
 
+kapt {
+    arguments {
+        arg("AROUTER_MODULE_NAME", project.getName())
+    }
+}
+
 android {
     compileSdkVersion rootProject.ext.compileSdkVersion
 
@@ -75,22 +81,21 @@ dependencies {
     api deps.retrofit_converter_gson
     api deps.okhttploginterceptor
 
-    api deps.network
-//    api deps.baseadapter
+//    api deps.network
 //    api deps.mvp_baselist
-
-    api deps.mvp_baselist
-    api (deps.kotlin.mvp_rxlifecycle_kotlin ) {
-        exclude group: 'android.arch.lifecycle', module: 'runtime'
-    }
-
-//    api project(":mvp-base")
-//    api project(":mvp-baselist")
-//    api project(":base-adapter")
-//    api project(":mvp-rxlifecycle")
-//    api (project(":mvp-rxlifecycle-kotlin")) {
+//    api (deps.kotlin.mvp_rxlifecycle_kotlin ) {
 //        exclude group: 'android.arch.lifecycle', module: 'runtime'
 //    }
+
+    api project(":base-adapter")
+    api project(":network")
+
+    api project(":mvp-base")
+    api project(":mvp-baselist")
+    api project(":mvp-rxlifecycle")
+    api (project(":mvp-rxlifecycle-kotlin")) {
+        exclude group: 'android.arch.lifecycle', module: 'runtime'
+    }
 
     kapt deps.glide_compiler
 

@@ -1,4 +1,4 @@
-package com.ayvytr.webview
+package com.ayvytr.commonlibrary.activity
 
 import android.os.Bundle
 import android.support.v7.widget.Toolbar
@@ -9,6 +9,7 @@ import android.webkit.WebView
 import android.webkit.WebViewClient
 import android.widget.FrameLayout
 import com.alibaba.android.arouter.facade.annotation.Route
+import com.ayvytr.commonlibrary.R
 import com.ayvytr.commonlibrary.constant.WebConstant
 import com.ayvytr.mvp.IPresenter
 import com.ayvytr.rxlifecycle.BaseMvpActivity
@@ -75,20 +76,9 @@ class WebViewActivity : BaseMvpActivity<IPresenter>() {
         }
     }
 
-    override fun initData(savedInstanceState: Bundle?) {
-
-    }
 
     override fun getContentViewRes(): Int {
         return R.layout.activity_web_view
-    }
-
-    override fun showLoading() {
-
-    }
-
-    override fun hideLoading() {
-
     }
 
     override fun onKeyDown(keyCode: Int, event: KeyEvent): Boolean {
