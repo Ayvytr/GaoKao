@@ -30,6 +30,10 @@
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:screenOrientation="portrait">
         </activity>
-    </application>
+
+        <meta-data
+            android:name="QBSDKAppKey"
+            android:value="PpeRpHjyzL5vTlc9LuNrRmHM" />
+</application>
 
 </manifest>

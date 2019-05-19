@@ -41,32 +41,26 @@ android {
 }
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    api fileTree(include: ['*.jar'], dir: 'libs')
     api deps.support.appcompat_v7
     api deps.support.recyclerview
     api deps.support.constraint
     api deps.support.design
     api deps.support.cardview
-
     api deps.rxjava2
     api(deps.rxjava2_android) {
         exclude module: "rxjava"
     }
     api deps.rxlifecycle2_components
-
     api deps.glide
-
     api deps.kotlin.kotlin_jdk7
     api deps.kotlin.anko
     api deps.kotlin.anko_commons
-
     api deps.kotlin.ktx
-
     api deps.logger
     api deps.junit
     api deps.testRunner
     api deps.espresso
-
     api deps.agentweb
     api deps.arouter
     api deps.smartrefresh
@@ -74,37 +68,31 @@ dependencies {
     api deps.andpermission
     api deps.customviews
     api deps.statusbar
-
     api deps.okhttp3
     api deps.retrofit
     api deps.retrofit_adapter_rxjava2
     api deps.retrofit_converter_gson
     api deps.okhttploginterceptor
-
-//    api deps.network
-//    api deps.mvp_baselist
-//    api (deps.kotlin.mvp_rxlifecycle_kotlin ) {
-//        exclude group: 'android.arch.lifecycle', module: 'runtime'
-//    }
-
-    api project(":base-adapter")
-    api project(":network")
-
-    api project(":mvp-base")
-    api project(":mvp-baselist")
-    api project(":mvp-rxlifecycle")
-    api (project(":mvp-rxlifecycle-kotlin")) {
+    //    api deps.network
+    //    api deps.mvp_baselist
+    //    api (deps.kotlin.mvp_rxlifecycle_kotlin ) {
+    //        exclude group: 'android.arch.lifecycle', module: 'runtime'
+    //    }
+    api project(':base-adapter')
+    api project(':network')
+    api project(':mvp-base')
+    api project(':mvp-baselist')
+    api project(':mvp-rxlifecycle')
+    api(project(':mvp-rxlifecycle-kotlin')) {
         exclude group: 'android.arch.lifecycle', module: 'runtime'
     }
-
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
     kapt deps.glide_compiler
-
-    api "ru.noties.markwon:core:3.0.1"
-    api "ru.noties.markwon:ext-tables:3.0.1"
-    api "ru.noties.markwon:image-okhttp:3.0.1"
-    api "ru.noties.markwon:image-gif:3.0.1"
-    api "ru.noties.markwon:html:3.0.1"
-    api "ru.noties.markwon:ext-latex:3.0.1"
-    api "ru.noties.markwon:syntax-highlight:3.0.1"
-
+    api 'ru.noties.markwon:core:3.0.1'
+    api 'ru.noties.markwon:ext-tables:3.0.1'
+    api 'ru.noties.markwon:image-okhttp:3.0.1'
+    api 'ru.noties.markwon:image-gif:3.0.1'
+    api 'ru.noties.markwon:html:3.0.1'
+    api 'ru.noties.markwon:ext-latex:3.0.1'
+    api 'ru.noties.markwon:syntax-highlight:3.0.1'
 }
