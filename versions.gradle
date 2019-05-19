@@ -118,7 +118,7 @@ deps.blockcanary_release = 'com.github.markzhai:blockcanary-no-op:1.5.0'
 
 deps.photoview = "com.github.chrisbanes:PhotoView:2.1.3"
 
-deps.customviews = 'com.ayvytr:custom-views:1.3.0'
+deps.customviews = 'com.ayvytr:custom-views:+'
 
 deps.statusbar = 'com.jaeger.statusbarutil:library:1.5.1'
 
