@@ -32,6 +32,10 @@
         </activity>
         <activity android:name=".markdown.Markwon"/>
         <activity android:name=".markdown.Markdown2Html"/>
-    </application>
+
+        <meta-data
+            android:name="QBSDKAppKey"
+            android:value="PpeRpHjyzL5vTlc9LuNrRmHM" />
+</application>
 
 </manifest>

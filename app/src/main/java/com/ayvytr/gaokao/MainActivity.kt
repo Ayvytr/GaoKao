@@ -22,5 +22,15 @@ class MainActivity : AppCompatActivity() {
         mCurrentFragment = switchFragment(MainVpFragment::class.java, R.id.fl_main, mCurrentFragment)
 
         startActivity<Markdown2Html>()
+
+
+//        startActivity<TbsWebViewActivity>(WebConstant.EXTRA_URL to "https://github.com/Ayvytr/KnowledgeHierarchy")
+//        startActivity<TbsWebViewActivity>(WebConstant.EXTRA_URL to "/storage/emulated/0/0a/心理学原理.威廉_詹姆斯.pdf")
+//        thread {
+//            Thread.sleep(1000)
+//            runOnUiThread {
+//                startActivity<TbsFileActivity>()
+//            }
+//        }
     }
 }

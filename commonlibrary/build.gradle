@@ -41,7 +41,7 @@ android {
 }
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    api fileTree(dir: 'libs', include: ['*.jar'])
     api deps.support.appcompat_v7
     api deps.support.recyclerview
     api deps.support.constraint
