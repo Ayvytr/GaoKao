@@ -18,4 +18,12 @@ fun Markwon.loadUrl(url: String, callback: Callback) {
         .enqueue(callback)
 }
 
+fun String.loadMarkdown(callback:Callback) {
+    val okHttpClient = ApiClient.getInstance().okHttpClient
+    val request = Request.Builder()
+        .url(this)
+        .build()
+    okHttpClient.newCall(request)
+        .enqueue(callback)
+}
 
