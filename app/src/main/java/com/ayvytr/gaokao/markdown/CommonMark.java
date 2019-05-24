@@ -10,6 +10,7 @@ import okhttp3.*;
 import org.commonmark.node.Node;
 import org.commonmark.parser.Parser;
 import org.commonmark.renderer.html.HtmlRenderer;
+import org.scilab.forge.jlatexmath.core.AjLatexMath;
 
 import java.io.IOException;
 
@@ -76,6 +77,7 @@ public class CommonMark extends AppCompatActivity {
                                 public void run() {
 
                                     statusView.showContent();
+                                    AjLatexMath.init(getApplicationContext());
                                     flexibleRichTextView.setText(render);
                                 }
                             });

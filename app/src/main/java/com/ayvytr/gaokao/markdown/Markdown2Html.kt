@@ -1,9 +1,8 @@
 package com.ayvytr.gaokao.markdown
 
 import android.os.Bundle
-import com.alibaba.android.arouter.launcher.ARouter
+import android.text.Html
 import com.ayvytr.commonlibrary.AppConfig
-import com.ayvytr.commonlibrary.constant.WebConstant
 import com.ayvytr.gaokao.util.loadMarkdown
 import com.ayvytr.mvp.IPresenter
 import com.ayvytr.rxlifecycle.BaseMvpActivity
@@ -57,11 +56,11 @@ class Markdown2Html : BaseMvpActivity<IPresenter>() {
                         //web_view.loadData(html, "text/html", "utf-8")
                         status_view.showContent()
 
-                        ARouter.getInstance().build(WebConstant.TBS_WEB)
-                            .withString(WebConstant.EXTRA_DATA, html)
-                            .withBoolean(WebConstant.EXTRA_IS_DATA, true)
-                            .navigation(getContext())
-//                        tv_content.setText(Html.fromHtml(html))
+//                        ARouter.getInstance().build(WebConstant.TBS_WEB)
+//                            .withString(WebConstant.EXTRA_DATA, html)
+//                            .withBoolean(WebConstant.EXTRA_IS_DATA, true)
+//                            .navigation(getContext())
+                        tv_content.setText(Html.fromHtml(html))
                     }
                 } else {
                     runOnUiThread {
