@@ -4,7 +4,7 @@ import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.support.v7.app.AppCompatActivity
 import com.ayvytr.gaokao.fragment.MainVpFragment
-import com.ayvytr.gaokao.markdown.Markdown2Html
+import com.ayvytr.gaokao.markdown.MarkedJs
 import com.ayvytr.ktx.ui.switchFragment
 import org.jetbrains.anko.startActivity
 
@@ -21,7 +21,7 @@ class MainActivity : AppCompatActivity() {
         setSupportActionBar(findViewById(R.id.toolbar))
         mCurrentFragment = switchFragment(MainVpFragment::class.java, R.id.fl_main, mCurrentFragment)
 
-        startActivity<Markdown2Html>()
+//        startActivity<Markdown2Html>()
 
 //        startActivity<TbsWebViewActivity>(WebConstant.EXTRA_URL to "https://github.com/Ayvytr/KnowledgeHierarchy")
 //        startActivity<TbsWebViewActivity>(WebConstant.EXTRA_URL to "/storage/emulated/0/0a/心理学原理.威廉_詹姆斯.pdf")
@@ -33,5 +33,6 @@ class MainActivity : AppCompatActivity() {
 //        }
 
 //        startActivity<CommonMark>()
+        startActivity<MarkedJs>()
     }
 }
