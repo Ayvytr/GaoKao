@@ -12,31 +12,18 @@ import android.text.Layout;
 import android.text.Spanned;
 import android.text.TextUtils;
 import android.text.method.LinkMovementMethod;
-import android.text.style.AlignmentSpan;
-import android.text.style.BackgroundColorSpan;
-import android.text.style.ClickableSpan;
-import android.text.style.ForegroundColorSpan;
-import android.text.style.ImageSpan;
-import android.text.style.RelativeSizeSpan;
-import android.text.style.StrikethroughSpan;
-import android.text.style.StyleSpan;
-import android.text.style.UnderlineSpan;
+import android.text.style.*;
 import android.util.AttributeSet;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.HorizontalScrollView;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
-import android.widget.RelativeLayout;
-import android.widget.TableLayout;
-import android.widget.TableRow;
-
+import android.widget.*;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.resource.drawable.GlideDrawable;
 import com.bumptech.glide.request.RequestListener;
 import com.bumptech.glide.request.target.Target;
+import io.github.kbiakov.codeview.CodeView;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -44,8 +31,6 @@ import java.util.Collections;
 import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-
-import io.github.kbiakov.codeview.CodeView;
 
 import static com.daquexian.flexiblerichtextview.Tokenizer.*;
 
@@ -482,6 +467,7 @@ public class FlexibleRichTextView extends LinearLayout {
                 .into(imageView);
         return imageView;
     }
+
 
     private List<Object> operate(List<Object> list, String operation, final String... operand) {
         switch (operation) {

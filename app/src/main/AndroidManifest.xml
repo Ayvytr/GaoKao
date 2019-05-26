@@ -36,6 +36,8 @@
         </activity>
         <activity android:name=".markdown.Markwon"/>
         <activity android:name=".markdown.Markdown2Html"/>
+        <activity android:name=".markdown.FlexMark">
+        </activity>
 
         <meta-data
             android:name="QBSDKAppKey"

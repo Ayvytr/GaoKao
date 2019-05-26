@@ -129,6 +129,11 @@ deps.crashMonitor = 'com.github.maning0303:MNCrashMonitor:V1.0.9'
 
 deps.bugly = 'com.tencent.bugly:crashreport:2.6.6'
 
+final def commonMarkVersion = '0.12.1'
+deps.commonmark = "com.atlassian.commonmark:commonmark:$commonMarkVersion"
+deps.commonmark_strikethrough = "com.atlassian.commonmark:commonmark-ext-gfm-strikethrough:$commonMarkVersion"
+deps.commonmark_table = "com.atlassian.commonmark:commonmark-ext-gfm-tables:$commonMarkVersion"
+
 
 ext.deps = deps
 

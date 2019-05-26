@@ -17,3 +17,12 @@ project(':mvp-baselist').projectDir = new File("../ModularizationComponent/mvp-b
 
 include ':mvp-rxlifecycle-kotlin'
 project(':mvp-rxlifecycle-kotlin').projectDir = new File("../ModularizationComponent/mvp-rxlifecycle-kotlin")
+
+include ':markwon-core'
+project(':markwon-core').projectDir = new File("../Markwon/markwon-core")
+
+include ':markwon-ext-latex'
+project(':markwon-ext-latex').projectDir = new File("../Markwon/markwon-ext-latex")
+
+include ':markwon-ext-tables'
+project(':markwon-ext-tables').projectDir = new File("../Markwon/markwon-ext-tables")

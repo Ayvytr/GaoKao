@@ -4,8 +4,6 @@ import android.os.Bundle
 import android.util.TypedValue
 import com.alibaba.android.arouter.launcher.ARouter
 import com.ayvytr.commonlibrary.AppConfig
-import com.ayvytr.commonlibrary.bean.AppSubject
-import com.ayvytr.commonlibrary.constant.IntentConst
 import com.ayvytr.commonlibrary.constant.WebConstant
 import com.ayvytr.commonlibrary.util.isUrl
 import com.ayvytr.gaokao.R
@@ -21,18 +19,17 @@ import ru.noties.markwon.AbstractMarkwonPlugin
 import ru.noties.markwon.Markwon
 import ru.noties.markwon.MarkwonConfiguration
 import ru.noties.markwon.ext.tables.TablePlugin
-import ru.noties.markwon.html.MarkwonHtmlParserImpl
 import ru.noties.markwon.image.AsyncDrawableLoader
 import java.io.IOException
 
 
 class Markwon : BaseMvpActivity<IPresenter>() {
-    private lateinit var mAppSubject: AppSubject
+//    private lateinit var mAppSubject: AppSubject
 
     private var mContent: String? = null
 
     override fun initExtra() {
-        mAppSubject = intent.getParcelableExtra<AppSubject>(IntentConst.EXTRA_SUBJECT)
+//        mAppSubject = intent.getParcelableExtra<AppSubject>(IntentConst.EXTRA_SUBJECT)
     }
 
     override fun initView(savedInstanceState: Bundle?) {
@@ -47,7 +44,7 @@ class Markwon : BaseMvpActivity<IPresenter>() {
         val markwon = Markwon.builder(getContext())
             .usePlugin(object : AbstractMarkwonPlugin() {
                 override fun configureConfiguration(builder: MarkwonConfiguration.Builder) {
-                    builder.htmlParser(MarkwonHtmlParserImpl.create())
+//                    builder.htmlParser(MarkwonHtmlParserImpl.create())
                     builder.linkResolver { view, link ->
                         ARouter.getInstance().build(WebConstant.WEB)
                             .withString(WebConstant.EXTRA_URL, link)

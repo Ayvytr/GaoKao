@@ -7,18 +7,14 @@ import android.widget.TextView;
 import com.ayvytr.customview.loading.StatusView;
 import com.ayvytr.gaokao.R;
 import com.ayvytr.network.ApiClient;
+import com.vladsch.flexmark.html.HtmlRenderer;
+import com.vladsch.flexmark.parser.Parser;
+import com.vladsch.flexmark.util.ast.Node;
 import okhttp3.*;
-import org.commonmark.Extension;
-import org.commonmark.ext.gfm.tables.TablesExtension;
-import org.commonmark.node.Node;
-import org.commonmark.parser.Parser;
-import org.commonmark.renderer.html.HtmlRenderer;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 
-public class CommonMark extends AppCompatActivity {
+public class FlexMark extends AppCompatActivity {
 
     private StatusView statusView;
     private TextView tv;
@@ -71,14 +67,9 @@ public class CommonMark extends AppCompatActivity {
                     public void onResponse(Call call, final Response response) throws IOException {
 
                         if (response.isSuccessful()) {
-                            List<Extension> extensions = new ArrayList<>();
-
-                            Parser parser = Parser.builder().extensions(extensions).build();
+                            Parser parser = Parser.builder().build();
                             Node document = parser.parse(response.body().string());
-                            extensions.add(TablesExtension.create());
-                            HtmlRenderer renderer = HtmlRenderer.builder()
-                                    .extensions(extensions)
-                                    .build();
+                            HtmlRenderer renderer = HtmlRenderer.builder().build();
                             final String render = renderer.render(document);// "<p>This is <em>Sparta</em></p>\n"
 
                             runOnUiThread(new Runnable() {

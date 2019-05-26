@@ -4,7 +4,7 @@ import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.support.v7.app.AppCompatActivity
 import com.ayvytr.gaokao.fragment.MainVpFragment
-import com.ayvytr.gaokao.markdown.MarkedJs
+import com.ayvytr.gaokao.markdown.Markwon
 import com.ayvytr.ktx.ui.switchFragment
 import org.jetbrains.anko.startActivity
 
@@ -33,6 +33,8 @@ class MainActivity : AppCompatActivity() {
 //        }
 
 //        startActivity<CommonMark>()
-        startActivity<MarkedJs>()
+//        startActivity<MarkedJs>()
+//        startActivity<FlexMark>()
+        startActivity<Markwon>()
     }
 }
