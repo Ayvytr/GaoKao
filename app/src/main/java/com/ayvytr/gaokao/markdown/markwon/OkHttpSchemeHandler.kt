@@ -1,6 +1,7 @@
-package com.ayvytr.commonlibrary.util
+package com.ayvytr.gaokao.markdown.markwon
 
 import android.net.Uri
+import com.ayvytr.commonlibrary.util.isUrl
 import com.ayvytr.logger.L
 import okhttp3.OkHttpClient
 import okhttp3.Request

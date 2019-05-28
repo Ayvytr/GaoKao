@@ -7,6 +7,7 @@ import com.ayvytr.commonlibrary.AppConfig
 import com.ayvytr.commonlibrary.constant.WebConstant
 import com.ayvytr.commonlibrary.util.isUrl
 import com.ayvytr.gaokao.R
+import com.ayvytr.gaokao.markdown.markwon.ImagesPlugin
 import com.ayvytr.mvp.IPresenter
 import com.ayvytr.network.ApiClient
 import com.ayvytr.rxlifecycle.BaseMvpActivity
@@ -64,7 +65,7 @@ class Markwon : BaseMvpActivity<IPresenter>() {
                 }
             })
             .usePlugin(TablePlugin.create(getContext()))
-            .usePlugin(com.ayvytr.commonlibrary.util.ImagesPlugin.create(getContext(), mContent))
+            .usePlugin(ImagesPlugin.create(getContext(), mContent))
 //            .usePlugin(ImagesPlugin.create(getContext()))
 //            .usePlugin(ru.noties.markwon.image.okhttp.OkHttpImagesPlugin.create(ApiClient.getInstance().okHttpClient))
 //            .usePlugin(OkHttpImagesPlugin.create(ApiClient.getInstance().okHttpClient, mContent))

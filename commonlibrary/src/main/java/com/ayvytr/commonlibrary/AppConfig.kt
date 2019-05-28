@@ -24,17 +24,35 @@ object AppConfig {
         settingsSp = context.getSharedPreferences(PREFS_SETTINGS, Context.MODE_PRIVATE)
     }
 
-    fun getSubjects(): ArrayList<AppSubject> = arrayListOf(
-        AppSubject(0, "语文"),
-        AppSubject(1, "数学"),
-        AppSubject(2, "英语"),
-        AppSubject(3, "物理"),
-        AppSubject(4, "化学"),
-        AppSubject(5, "生物"),
-        AppSubject(6, "历史"),
-        AppSubject(7, "地理"),
-        AppSubject(8, "政治")
+    /**
+     * 初中
+     */
+    fun getJuniorSubjects(): ArrayList<AppSubject> = arrayListOf(
+        AppSubject(0, "语文", "https://raw.githubusercontent.com/Ayvytr/KnowledgeHierarchy/master/%E5%88%9D%E4%B8%AD/%E6%95%B0%E5%AD%A6.md"),
+        AppSubject(1, "数学", "https://raw.githubusercontent.com/Ayvytr/KnowledgeHierarchy/master/%E5%88%9D%E4%B8%AD/%E6%95%B0%E5%AD%A6.md"),
+        AppSubject(2, "英语", "https://raw.githubusercontent.com/Ayvytr/KnowledgeHierarchy/master/%E5%88%9D%E4%B8%AD/%E6%95%B0%E5%AD%A6.md"),
+        AppSubject(3, "物理", "https://raw.githubusercontent.com/Ayvytr/KnowledgeHierarchy/master/%E5%88%9D%E4%B8%AD/%E6%95%B0%E5%AD%A6.md"),
+        AppSubject(4, "化学", "https://raw.githubusercontent.com/Ayvytr/KnowledgeHierarchy/master/%E5%88%9D%E4%B8%AD/%E6%95%B0%E5%AD%A6.md"),
+        AppSubject(5, "生物", "https://raw.githubusercontent.com/Ayvytr/KnowledgeHierarchy/master/%E5%88%9D%E4%B8%AD/%E6%95%B0%E5%AD%A6.md"),
+        AppSubject(6, "历史", "https://raw.githubusercontent.com/Ayvytr/KnowledgeHierarchy/master/%E5%88%9D%E4%B8%AD/%E6%95%B0%E5%AD%A6.md"),
+        AppSubject(7, "地理", "https://raw.githubusercontent.com/Ayvytr/KnowledgeHierarchy/master/%E5%88%9D%E4%B8%AD/%E6%95%B0%E5%AD%A6.md"),
+        AppSubject(8, "政治", "https://raw.githubusercontent.com/Ayvytr/KnowledgeHierarchy/master/%E5%88%9D%E4%B8%AD/%E6%95%B0%E5%AD%A6.md")
     )
+
+    /**
+     * 高中
+     */
+    fun getSeniorSubjects(): ArrayList<AppSubject> = arrayListOf(
+        AppSubject(0, "语文", "https://raw.githubusercontent.com/Ayvytr/KnowledgeHierarchy/master/%E6%95%B0%E5%AD%A6.md"),
+        AppSubject(1, "数学", "https://raw.githubusercontent.com/Ayvytr/KnowledgeHierarchy/master/%E6%95%B0%E5%AD%A6.md"),
+        AppSubject(2, "英语", "https://raw.githubusercontent.com/Ayvytr/KnowledgeHierarchy/master/%E6%95%B0%E5%AD%A6.md"),
+        AppSubject(3, "物理", "https://raw.githubusercontent.com/Ayvytr/KnowledgeHierarchy/master/%E6%95%B0%E5%AD%A6.md"),
+        AppSubject(4, "化学", "https://raw.githubusercontent.com/Ayvytr/KnowledgeHierarchy/master/%E6%95%B0%E5%AD%A6.md"),
+        AppSubject(5, "生物", "https://raw.githubusercontent.com/Ayvytr/KnowledgeHierarchy/master/%E6%95%B0%E5%AD%A6.md"),
+        AppSubject(6, "历史", "https://raw.githubusercontent.com/Ayvytr/KnowledgeHierarchy/master/%E6%95%B0%E5%AD%A6.md"),
+        AppSubject(7, "地理", "https://raw.githubusercontent.com/Ayvytr/KnowledgeHierarchy/master/%E6%95%B0%E5%AD%A6.md"),
+        AppSubject(8, "政治", "https://raw.githubusercontent.com/Ayvytr/KnowledgeHierarchy/master/%E6%95%B0%E5%AD%A6.md")
+        )
 
     fun markdownFontSize(): Int {
         return settingsSp.getInt(SETTINGS_MARKDOWN_FONT_SIZE, DEFAULT_MARKDOWN_FONT_SIZE)

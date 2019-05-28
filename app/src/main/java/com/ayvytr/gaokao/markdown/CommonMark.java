@@ -18,6 +18,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+@Deprecated
 public class CommonMark extends AppCompatActivity {
 
     private StatusView statusView;

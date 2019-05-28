@@ -1,4 +1,4 @@
-package com.ayvytr.commonlibrary.util;
+package com.ayvytr.gaokao.markdown.markwon;
 
 import android.content.Context;
 import android.support.annotation.NonNull;

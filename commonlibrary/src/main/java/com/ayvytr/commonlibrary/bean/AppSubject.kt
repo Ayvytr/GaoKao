@@ -11,5 +11,6 @@ import kotlinx.android.parcel.Parcelize
 data class AppSubject(
     var id: Int? = null,
     var name: String? = null,
+    var url: String? = null,
     var desc: String? = null
 ) : Parcelable

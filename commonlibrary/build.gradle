@@ -100,18 +100,20 @@ dependencies {
     kapt deps.arouter_compiler
     kapt deps.glide_compiler
 
-//    api "ru.noties.markwon:core:3.0.1"
-//    api "ru.noties.markwon:ext-tables:3.0.1"
+    api "ru.noties.markwon:core:3.0.1"
+    api "ru.noties.markwon:ext-tables:3.0.1"
 //    api "ru.noties.markwon:image-okhttp:3.0.1"
 //    api "ru.noties.markwon:image-gif:3.0.1"
 //    api "ru.noties.markwon:html:3.0.1"
-//    api "ru.noties.markwon:ext-latex:3.0.1"
+    api "ru.noties.markwon:ext-latex:3.0.1"
 //    api "ru.noties.markwon:syntax-highlight:3.0.1"
-    api project(":markwon-core")
-    api project(":markwon-ext-tables")
-    api project(":markwon-ext-latex")
+//    api project(":markwon-core")
+//    api project(":markwon-ext-tables")
+//    api project(":markwon-ext-latex")
 
-    api "com.vladsch.flexmark:flexmark:0.42.6"
-    api "com.vladsch.flexmark:flexmark-util:0.42.6"
-    api "com.vladsch.flexmark:flexmark-ext-tables:0.42.6"
+    api project(":FlexibleTv")
+
+//    api "com.vladsch.flexmark:flexmark:0.42.6"
+//    api "com.vladsch.flexmark:flexmark-util:0.42.6"
+//    api "com.vladsch.flexmark:flexmark-ext-tables:0.42.6"
 }

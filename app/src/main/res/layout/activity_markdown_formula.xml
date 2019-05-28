@@ -15,16 +15,10 @@
         android:layout_weight="1"
         android:layout_height="@dimen/_0dp">
 
-
-        <android.support.v4.widget.NestedScrollView
+        <com.daquexian.flexiblerichtextview.FlexibleRichTextView
+            android:id="@+id/flexible_tv"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"/>
 
-            <TextView
-                android:id="@+id/tv_content"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
-
-        </android.support.v4.widget.NestedScrollView>
     </com.ayvytr.customview.loading.StatusView>
 </LinearLayout>
