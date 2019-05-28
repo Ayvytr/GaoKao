@@ -12,6 +12,8 @@
         android:layout_weight="1"
         android:layout_height="@dimen/_0dp"/>
 
+    <include layout="@layout/layout_h_line"/>
+
     <android.support.design.widget.BottomNavigationView
         android:id="@+id/bottom_navigation"
         android:layout_width="match_parent"

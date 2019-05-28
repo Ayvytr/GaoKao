@@ -12,5 +12,6 @@ data class AppSubject(
     var id: Int? = null,
     var name: String? = null,
     var url: String? = null,
+    var hasFormula:Boolean = false,
     var desc: String? = null
 ) : Parcelable

@@ -1,6 +1,7 @@
 package com.ayvytr.gaokao
 
 import android.os.Bundle
+import android.support.v7.widget.Toolbar
 import com.ayvytr.commonlibrary.AppConfig
 import com.ayvytr.commonlibrary.bean.AppSubject
 import com.ayvytr.commonlibrary.constant.IntentConst
@@ -19,12 +20,17 @@ import java.io.IOException
 
 class MarkdownFormulaActivity : BaseMvpActivity<IPresenter>() {
     private lateinit var mAppSubject: AppSubject
+    private lateinit var toolbar: Toolbar
 
     override fun initExtra() {
         mAppSubject = intent.getParcelableExtra<AppSubject>(IntentConst.EXTRA_SUBJECT)
     }
 
     override fun initView(savedInstanceState: Bundle?) {
+        toolbar = findViewById(R.id.toolbar)
+        setSupportActionBar(toolbar)
+        toolbar.setTitle(mAppSubject.name)
+
         val textSize = AppConfig.markdownFontSize().toFloat()
 //        tv_content.setTextSize(TypedValue.COMPLEX_UNIT_SP, textSize)
 
@@ -45,8 +51,12 @@ class MarkdownFormulaActivity : BaseMvpActivity<IPresenter>() {
 
                     override fun onResponse(call: Call, response: Response) {
                         runOnUiThread {
-                            status_view.showContent()
-                            flexible_tv.setText(response.body()!!.string())
+                            if(response.isSuccessful) {
+                                status_view.showContent()
+                                flexible_tv.setText(response.body()!!.string())
+                            } else {
+                                status_view.showError("${response.code()} ${response.message()}")
+                            }
                         }
                     }
                 })

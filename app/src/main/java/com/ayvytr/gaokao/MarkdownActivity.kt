@@ -1,6 +1,7 @@
 package com.ayvytr.gaokao
 
 import android.os.Bundle
+import android.support.v7.widget.Toolbar
 import android.util.TypedValue
 import com.alibaba.android.arouter.launcher.ARouter
 import com.ayvytr.commonlibrary.AppConfig
@@ -27,12 +28,17 @@ import java.io.IOException
 
 class MarkdownActivity : BaseMvpActivity<IPresenter>() {
     private lateinit var mAppSubject: AppSubject
+    private lateinit var toolbar: Toolbar
 
     override fun initExtra() {
         mAppSubject = intent.getParcelableExtra<AppSubject>(IntentConst.EXTRA_SUBJECT)
     }
 
     override fun initView(savedInstanceState: Bundle?) {
+        toolbar = findViewById(R.id.toolbar)
+        setSupportActionBar(toolbar)
+        toolbar.setTitle(mAppSubject.name)
+
         val textSize = AppConfig.markdownFontSize().toFloat()
         tv_content.setTextSize(TypedValue.COMPLEX_UNIT_SP, textSize)
 
@@ -96,8 +102,12 @@ class MarkdownActivity : BaseMvpActivity<IPresenter>() {
 
                     override fun onResponse(call: Call, response: Response) {
                         runOnUiThread {
-                            markwon.setMarkdown(tv_content, response.body()!!.string())
-                            status_view.showContent()
+                            if (response.isSuccessful) {
+                                markwon.setMarkdown(tv_content, response.body()!!.string())
+                                status_view.showContent()
+                            } else {
+                                status_view.showError("${response.code()} ${response.message()}")
+                            }
                         }
                     }
                 })

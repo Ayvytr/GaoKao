@@ -25,34 +25,36 @@ object AppConfig {
     }
 
     /**
+     * TODO: 修正链接
      * 初中
      */
     fun getJuniorSubjects(): ArrayList<AppSubject> = arrayListOf(
-        AppSubject(0, "语文", "https://raw.githubusercontent.com/Ayvytr/KnowledgeHierarchy/master/%E5%88%9D%E4%B8%AD/%E6%95%B0%E5%AD%A6.md"),
-        AppSubject(1, "数学", "https://raw.githubusercontent.com/Ayvytr/KnowledgeHierarchy/master/%E5%88%9D%E4%B8%AD/%E6%95%B0%E5%AD%A6.md"),
-        AppSubject(2, "英语", "https://raw.githubusercontent.com/Ayvytr/KnowledgeHierarchy/master/%E5%88%9D%E4%B8%AD/%E6%95%B0%E5%AD%A6.md"),
-        AppSubject(3, "物理", "https://raw.githubusercontent.com/Ayvytr/KnowledgeHierarchy/master/%E5%88%9D%E4%B8%AD/%E6%95%B0%E5%AD%A6.md"),
-        AppSubject(4, "化学", "https://raw.githubusercontent.com/Ayvytr/KnowledgeHierarchy/master/%E5%88%9D%E4%B8%AD/%E6%95%B0%E5%AD%A6.md"),
-        AppSubject(5, "生物", "https://raw.githubusercontent.com/Ayvytr/KnowledgeHierarchy/master/%E5%88%9D%E4%B8%AD/%E6%95%B0%E5%AD%A6.md"),
-        AppSubject(6, "历史", "https://raw.githubusercontent.com/Ayvytr/KnowledgeHierarchy/master/%E5%88%9D%E4%B8%AD/%E6%95%B0%E5%AD%A6.md"),
-        AppSubject(7, "地理", "https://raw.githubusercontent.com/Ayvytr/KnowledgeHierarchy/master/%E5%88%9D%E4%B8%AD/%E6%95%B0%E5%AD%A6.md"),
-        AppSubject(8, "政治", "https://raw.githubusercontent.com/Ayvytr/KnowledgeHierarchy/master/%E5%88%9D%E4%B8%AD/%E6%95%B0%E5%AD%A6.md")
+        AppSubject(0, "语文", "https://raw.githubusercontent.com/Ayvytr/KnowledgeHierarchy/master/%E5%88%9D%E4%B8%AD/%E6%95%B0%E5%AD%A6.md", false),
+        AppSubject(1, "数学", "https://raw.githubusercontent.com/Ayvytr/KnowledgeHierarchy/master/%E5%88%9D%E4%B8%AD/%E6%95%B0%E5%AD%A6.md", true),
+        AppSubject(2, "英语", "https://raw.githubusercontent.com/Ayvytr/KnowledgeHierarchy/master/%E5%88%9D%E4%B8%AD/%E6%95%B0%E5%AD%A6.md", false),
+        AppSubject(3, "物理", "https://raw.githubusercontent.com/Ayvytr/KnowledgeHierarchy/master/%E5%88%9D%E4%B8%AD/%E6%95%B0%E5%AD%A6.md", true),
+        AppSubject(4, "化学", "https://raw.githubusercontent.com/Ayvytr/KnowledgeHierarchy/master/%E5%88%9D%E4%B8%AD/%E6%95%B0%E5%AD%A6.md", true),
+        AppSubject(5, "生物", "https://raw.githubusercontent.com/Ayvytr/KnowledgeHierarchy/master/%E5%88%9D%E4%B8%AD/%E6%95%B0%E5%AD%A6.md", true),
+        AppSubject(6, "历史", "https://raw.githubusercontent.com/Ayvytr/KnowledgeHierarchy/master/%E5%88%9D%E4%B8%AD/%E6%95%B0%E5%AD%A6.md", false),
+        AppSubject(7, "地理", "https://raw.githubusercontent.com/Ayvytr/KnowledgeHierarchy/master/%E5%88%9D%E4%B8%AD/%E6%95%B0%E5%AD%A6.md", false),
+        AppSubject(8, "政治", "https://raw.githubusercontent.com/Ayvytr/KnowledgeHierarchy/master/%E5%88%9D%E4%B8%AD/%E6%95%B0%E5%AD%A6.md", false)
     )
 
     /**
+     * TODO: 修正链接
      * 高中
      */
     fun getSeniorSubjects(): ArrayList<AppSubject> = arrayListOf(
-        AppSubject(0, "语文", "https://raw.githubusercontent.com/Ayvytr/KnowledgeHierarchy/master/%E6%95%B0%E5%AD%A6.md"),
-        AppSubject(1, "数学", "https://raw.githubusercontent.com/Ayvytr/KnowledgeHierarchy/master/%E6%95%B0%E5%AD%A6.md"),
-        AppSubject(2, "英语", "https://raw.githubusercontent.com/Ayvytr/KnowledgeHierarchy/master/%E6%95%B0%E5%AD%A6.md"),
-        AppSubject(3, "物理", "https://raw.githubusercontent.com/Ayvytr/KnowledgeHierarchy/master/%E6%95%B0%E5%AD%A6.md"),
-        AppSubject(4, "化学", "https://raw.githubusercontent.com/Ayvytr/KnowledgeHierarchy/master/%E6%95%B0%E5%AD%A6.md"),
-        AppSubject(5, "生物", "https://raw.githubusercontent.com/Ayvytr/KnowledgeHierarchy/master/%E6%95%B0%E5%AD%A6.md"),
-        AppSubject(6, "历史", "https://raw.githubusercontent.com/Ayvytr/KnowledgeHierarchy/master/%E6%95%B0%E5%AD%A6.md"),
-        AppSubject(7, "地理", "https://raw.githubusercontent.com/Ayvytr/KnowledgeHierarchy/master/%E6%95%B0%E5%AD%A6.md"),
-        AppSubject(8, "政治", "https://raw.githubusercontent.com/Ayvytr/KnowledgeHierarchy/master/%E6%95%B0%E5%AD%A6.md")
-        )
+        AppSubject(0, "语文", "https://raw.githubusercontent.com/Ayvytr/KnowledgeHierarchy/master/%E6%95%B0%E5%AD%A6.md", false),
+        AppSubject(1, "数学", "https://raw.githubusercontent.com/Ayvytr/KnowledgeHierarchy/master/%E6%95%B0%E5%AD%A6.md", true),
+        AppSubject(2, "英语", "https://raw.githubusercontent.com/Ayvytr/KnowledgeHierarchy/master/%E6%95%B0%E5%AD%A6.md", false),
+        AppSubject(3, "物理", "https://raw.githubusercontent.com/Ayvytr/KnowledgeHierarchy/master/%E6%95%B0%E5%AD%A6.md", true),
+        AppSubject(4, "化学", "https://raw.githubusercontent.com/Ayvytr/KnowledgeHierarchy/master/%E6%95%B0%E5%AD%A6.md", true),
+        AppSubject(5, "生物", "https://raw.githubusercontent.com/Ayvytr/KnowledgeHierarchy/master/%E6%95%B0%E5%AD%A6.md", true),
+        AppSubject(6, "历史", "https://raw.githubusercontent.com/Ayvytr/KnowledgeHierarchy/master/%E6%95%B0%E5%AD%A6.md", false),
+        AppSubject(7, "地理", "https://raw.githubusercontent.com/Ayvytr/KnowledgeHierarchy/master/%E6%95%B0%E5%AD%A6.md", false),
+        AppSubject(8, "政治", "https://raw.githubusercontent.com/Ayvytr/KnowledgeHierarchy/master/%E6%95%B0%E5%AD%A6.md", false)
+    )
 
     fun markdownFontSize(): Int {
         return settingsSp.getInt(SETTINGS_MARKDOWN_FONT_SIZE, DEFAULT_MARKDOWN_FONT_SIZE)

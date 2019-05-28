@@ -21,11 +21,21 @@ class MineFragment : BaseMvpFragment<IPresenter>() {
         tv_markdown_fontsize.onClick {
             AlertDialog.Builder(context!!)
                 .setTitle("选择字体大小")
-                .setSingleChoiceItems(R.array.markdownFontSizeArray, markdownFontSize - DEFAULT_MARKDOWN_FONT_SIZE) { dialog, which ->
+                .setSingleChoiceItems(
+                    R.array.markdownFontSizeArray,
+                    markdownFontSize - DEFAULT_MARKDOWN_FONT_SIZE
+                ) { dialog, which ->
                     AppConfig.setMarkdownFontSize(which + DEFAULT_MARKDOWN_FONT_SIZE)
                     dialog.dismiss()
                 }
                 .show()
+        }
+
+        context?.let {
+            val packageInfo = it.packageManager.getPackageInfo(it.packageName, 0)
+            tv_version.text = "Package Name: ${it.packageName} " +
+                    "\nVersion Name: ${packageInfo.versionName} " +
+                    "\nVersion Code: ${packageInfo.versionCode}"
         }
     }
 

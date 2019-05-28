@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">LaTexLibrary</string>
-    <string name="collapse">collapse  ↑</string>
-    <string name="expand">expand  ↓</string>
+    <string name="app_name">FlexibleRichTextView</string>
+    <string name="collapse">收起  ↑</string>
+    <string name="expand">展开  ↓</string>
 </resources>

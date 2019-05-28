@@ -8,15 +8,15 @@ import android.view.MenuItem
 import com.ayvytr.gaokao.R
 import com.ayvytr.mvp.IPresenter
 import com.ayvytr.rxlifecycle.BaseMvpFragment
-import kotlinx.android.synthetic.main.fragment_main_vp.*
+import kotlinx.android.synthetic.main.fragment_main_navigatino.*
 
 /**
  * @author admin
  */
-class MainVpFragment : BaseMvpFragment<IPresenter>(), BottomNavigationView.OnNavigationItemSelectedListener {
+class MainNavigationFragment : BaseMvpFragment<IPresenter>(), BottomNavigationView.OnNavigationItemSelectedListener {
 
     override fun getContentViewRes(): Int {
-        return R.layout.fragment_main_vp
+        return R.layout.fragment_main_navigatino
     }
 
     override fun initData(savedInstanceState: Bundle?) {
@@ -26,7 +26,7 @@ class MainVpFragment : BaseMvpFragment<IPresenter>(), BottomNavigationView.OnNav
     }
 
     override fun initView(savedInstanceState: Bundle?) {
-        val fragments = arrayListOf(MainFragment(), MainFragment(), MineFragment())
+        val fragments = arrayListOf(SeniorFragment(), JuniorFragment(), MineFragment())
 
         vp.adapter = object : FragmentPagerAdapter(childFragmentManager) {
             override fun getCount(): Int {

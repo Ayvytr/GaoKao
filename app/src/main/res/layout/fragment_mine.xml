@@ -13,4 +13,11 @@
         android:gravity="center_vertical"
         android:text="Markdown字体大小"
         android:textSize="@dimen/_24sp"/>
+
+    <TextView
+        android:id="@+id/tv_version"
+        android:layout_width="match_parent"
+        android:textSize="@dimen/_14sp"
+        android:textColor="@color/black"
+        android:layout_height="wrap_content"/>
 </LinearLayout>
