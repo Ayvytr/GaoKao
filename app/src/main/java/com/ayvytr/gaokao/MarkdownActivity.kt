@@ -10,9 +10,7 @@ import com.ayvytr.commonlibrary.bean.AppSubject
 import com.ayvytr.commonlibrary.constant.IntentConst
 import com.ayvytr.commonlibrary.constant.WebConstant
 import com.ayvytr.commonlibrary.util.isUrl
-import com.ayvytr.gaokao.markdown.markwon.ImagesPlugin
 import com.ayvytr.ktx.ui.show
-import com.ayvytr.logger.L
 import com.ayvytr.mvp.IPresenter
 import com.ayvytr.network.ApiClient
 import com.ayvytr.rxlifecycle.BaseMvpActivity
@@ -26,8 +24,10 @@ import org.jetbrains.anko.support.v4.onScrollChange
 import ru.noties.markwon.AbstractMarkwonPlugin
 import ru.noties.markwon.Markwon
 import ru.noties.markwon.MarkwonConfiguration
+import ru.noties.markwon.ext.latex.JLatexMathPlugin
 import ru.noties.markwon.ext.tables.TablePlugin
 import ru.noties.markwon.image.AsyncDrawableLoader
+import ru.noties.markwon.image.ImagesPlugin
 import java.io.IOException
 
 
@@ -52,7 +52,6 @@ class MarkdownActivity : BaseMvpActivity<IPresenter>() {
         status_view.showLoading()
 
         nsv.onScrollChange { v, scrollX, scrollY, oldScrollX, oldScrollY ->
-            L.e(v, scrollX, scrollY, oldScrollX, oldScrollY)
 
             fab_top.show(scrollY != 0)
             if (tv_content.getHeight() <= scrollY + nsv.getHeight()) {   // 如果满足就是到底部了
@@ -94,7 +93,7 @@ class MarkdownActivity : BaseMvpActivity<IPresenter>() {
                 }
             })
             .usePlugin(TablePlugin.create(getContext()))
-            .usePlugin(ImagesPlugin.create(getContext(), mAppSubject.url))
+            .usePlugin(ImagesPlugin.create(getContext()))
 //            .usePlugin(ImagesPlugin.create(getContext()))
 //            .usePlugin(ru.noties.markwon.image.okhttp.OkHttpImagesPlugin.create(ApiClient.getInstance().okHttpClient))
 //            .usePlugin(OkHttpImagesPlugin.create(ApiClient.getInstance().okHttpClient, mContent))
@@ -108,7 +107,7 @@ class MarkdownActivity : BaseMvpActivity<IPresenter>() {
 //                    .fitCanvas(true)
 //                    .padding(dip(10))
 //            })
-//            .usePlugin(JLatexMathPlugin.create(textSize))
+            .usePlugin(JLatexMathPlugin.create(textSize))
             .build()
 
         if (mAppSubject.url!!.isUrl()) {
@@ -127,7 +126,7 @@ class MarkdownActivity : BaseMvpActivity<IPresenter>() {
                     override fun onResponse(call: Call, response: Response) {
                         runOnUiThread {
                             if (response.isSuccessful) {
-                                markwon.setMarkdown(tv_content, response.body()!!.string())
+                                markwon.setMarkdown(tv_content, response.body()!!.string(), mAppSubject.url!!)
                                 status_view.showContent()
 
 //                                L.e(tv_content.height, nsv.height)

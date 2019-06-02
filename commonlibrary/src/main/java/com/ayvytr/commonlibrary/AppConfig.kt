@@ -45,7 +45,7 @@ object AppConfig {
      * 高中
      */
     fun getSeniorSubjects(): ArrayList<AppSubject> = arrayListOf(
-        AppSubject(0, "语文", "https://raw.githubusercontent.com/Ayvytr/KnowledgeHierarchy/master/%E6%95%B0%E5%AD%A6.md", false),
+        AppSubject(0, "语文", "https://raw.githubusercontent.com/Ayvytr/KnowledgeHierarchy/master/%E5%88%9D%E4%B8%AD/type.md", false),
         AppSubject(1, "数学", "https://raw.githubusercontent.com/Ayvytr/KnowledgeHierarchy/master/%E6%95%B0%E5%AD%A6.md", true),
         AppSubject(2, "英语", "https://raw.githubusercontent.com/Ayvytr/KnowledgeHierarchy/master/%E6%95%B0%E5%AD%A6.md", false),
         AppSubject(3, "物理", "https://raw.githubusercontent.com/Ayvytr/KnowledgeHierarchy/master/%E6%95%B0%E5%AD%A6.md", true),
