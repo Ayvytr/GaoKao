@@ -3,6 +3,7 @@ package com.ayvytr.gaokao
 import android.os.Bundle
 import android.support.v7.widget.Toolbar
 import android.util.TypedValue
+import android.view.View
 import com.alibaba.android.arouter.launcher.ARouter
 import com.ayvytr.commonlibrary.AppConfig
 import com.ayvytr.commonlibrary.bean.AppSubject
@@ -10,6 +11,8 @@ import com.ayvytr.commonlibrary.constant.IntentConst
 import com.ayvytr.commonlibrary.constant.WebConstant
 import com.ayvytr.commonlibrary.util.isUrl
 import com.ayvytr.gaokao.markdown.markwon.ImagesPlugin
+import com.ayvytr.ktx.ui.show
+import com.ayvytr.logger.L
 import com.ayvytr.mvp.IPresenter
 import com.ayvytr.network.ApiClient
 import com.ayvytr.rxlifecycle.BaseMvpActivity
@@ -18,12 +21,16 @@ import okhttp3.Call
 import okhttp3.Callback
 import okhttp3.Request
 import okhttp3.Response
+import org.jetbrains.anko.sdk27.coroutines.onClick
+import org.jetbrains.anko.support.v4.onScrollChange
 import ru.noties.markwon.AbstractMarkwonPlugin
 import ru.noties.markwon.Markwon
 import ru.noties.markwon.MarkwonConfiguration
 import ru.noties.markwon.ext.tables.TablePlugin
 import ru.noties.markwon.image.AsyncDrawableLoader
 import java.io.IOException
+
+
 
 
 class MarkdownActivity : BaseMvpActivity<IPresenter>() {
@@ -44,8 +51,25 @@ class MarkdownActivity : BaseMvpActivity<IPresenter>() {
 
         status_view.showLoading()
 
-//        mContent =
-//            "https://raw.githubusercontent.com/Ayvytr/KnowledgeHierarchy/master/%E5%88%9D%E4%B8%AD/%E6%95%B0%E5%AD%A6.md"
+        nsv.onScrollChange { v, scrollX, scrollY, oldScrollX, oldScrollY ->
+            L.e(v, scrollX, scrollY, oldScrollX, oldScrollY)
+
+            fab_top.show(scrollY != 0)
+            if (tv_content.getHeight() <= scrollY + nsv.getHeight()) {   // 如果满足就是到底部了
+                fab_bottom.hide()
+            } else {
+                fab_bottom.show()
+            }
+        }
+
+        fab_top.onClick {
+            nsv.fling(0)
+            nsv.fullScroll(View.FOCUS_UP)
+        }
+        fab_bottom.onClick {
+            nsv.fullScroll(View.FOCUS_DOWN)
+        }
+
 
         val markwon = Markwon.builder(getContext())
             .usePlugin(object : AbstractMarkwonPlugin() {
@@ -105,6 +129,12 @@ class MarkdownActivity : BaseMvpActivity<IPresenter>() {
                             if (response.isSuccessful) {
                                 markwon.setMarkdown(tv_content, response.body()!!.string())
                                 status_view.showContent()
+
+//                                L.e(tv_content.height, nsv.height)
+//                                if(tv_content.height == nsv.height) {
+//                                    fab_top.show()
+//                                    fab_bottom.show()
+//                                }
                             } else {
                                 status_view.showError("${response.code()} ${response.message()}")
                             }

@@ -31,9 +31,9 @@ class JuniorFragment : BaseMvpFragment<IPresenter>() {
         mAdapter.setOnItemClickListener { view, holder, position ->
             val appSubject = mAdapter.getItemAt(position)
             if (appSubject.hasFormula) {
-                startActivity<MarkdownActivity>(IntentConst.EXTRA_SUBJECT to appSubject)
-            } else {
                 startActivity<MarkdownFormulaActivity>(IntentConst.EXTRA_SUBJECT to appSubject)
+            } else {
+                startActivity<MarkdownActivity>(IntentConst.EXTRA_SUBJECT to appSubject)
             }
         }
         rv_main.adapter = mAdapter

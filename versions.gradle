@@ -55,6 +55,21 @@ kotlin.ktx = "com.ayvytr:ktx:2.3.1"
 
 deps.kotlin = kotlin
 
+def test = [:]
+test.junit = "junit:junit:4.12"
+test.testRunner = "com.android.support.test:runner:1.0.2"
+test.espresso = "com.android.support.test.espresso:espresso-core:3.0.2"
+test.robolectric = 'org.robolectric:robolectric:3.8'
+test.ixjava = 'com.github.akarnokd:ixjava:1.0.0'
+test.commons_io = 'commons-io:commons-io:2.6'
+test.mockito = 'org.mockito:mockito-core:2.21.0'
+
+deps.test = test
+
+deps.junit = "junit:junit:4.12"
+deps.testRunner = "com.android.support.test:runner:1.0.2"
+deps.espresso = "com.android.support.test.espresso:espresso-core:3.0.2"
+
 //ayvytr
 deps.base_adapter = "com.ayvytr:base-adapter:$versions.ayvytr_mc"
 deps.mvp_baselist = "com.ayvytr:mvp-baselist:$versions.ayvytr_mc"
@@ -97,10 +112,6 @@ deps.greenDao = "org.greenrobot:greendao:3.2.2"
 deps.arouter = "com.alibaba:arouter-api:1.4.0"
 deps.arouter_compiler = "com.alibaba:arouter-compiler:1.2.1"
 
-deps.junit = "junit:junit:4.12"
-deps.testRunner = "com.android.support.test:runner:1.0.2"
-deps.espresso = "com.android.support.test.espresso:espresso-core:3.0.2"
-
 deps.okhttploginterceptor = "com.ayvytr:okhttploginterceptor:1.0.0"
 deps.logger = "com.ayvytr:logger:3.0.0"
 
@@ -134,6 +145,13 @@ deps.commonmark = "com.atlassian.commonmark:commonmark:$commonMarkVersion"
 deps.commonmark_strikethrough = "com.atlassian.commonmark:commonmark-ext-gfm-strikethrough:$commonMarkVersion"
 deps.commonmark_table = "com.atlassian.commonmark:commonmark-ext-gfm-tables:$commonMarkVersion"
 
+deps.jlatexmath_android = 'ru.noties:jlatexmath-android:0.1.0'
+deps.android_gif = 'pl.droidsonroids.gif:android-gif-drawable:1.2.14'
+deps.android_svg = 'com.caverock:androidsvg:1.2.1'
+deps.prism4j = 'ru.noties:prism4j:1.1.0'
+deps.debug = 'ru.noties:debug:3.0.0@jar'
+deps.adapt = 'ru.noties:adapt:1.1.0'
+deps.prism4j_bundler = 'ru.noties:prism4j-bundler:1.1.0'
 
 ext.deps = deps
 

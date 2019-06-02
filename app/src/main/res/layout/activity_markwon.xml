@@ -16,20 +16,58 @@
         android:layout_weight="1"
         android:layout_height="@dimen/_0dp">
 
-        <android.support.v4.widget.NestedScrollView
+        <RelativeLayout
+            android:descendantFocusability="blocksDescendants"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:paddingLeft="@dimen/_5dp"
-            android:paddingRight="@dimen/_5dp"
-            android:layout_weight="1">
+            android:layout_height="match_parent">
 
-            <TextView
-                android:id="@+id/tv_content"
+            <android.support.v4.widget.NestedScrollView
+                android:id="@+id/nsv"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingBottom="@dimen/_80dp"
-                android:textSize="@dimen/_14sp"/>
-        </android.support.v4.widget.NestedScrollView>
+                android:layout_height="match_parent"
+                android:scrollbars="vertical"
+                android:scrollbarSize="@dimen/_30dp"
+                android:fadeScrollbars="false"
+                android:scrollbarThumbVertical="@drawable/scrollbar_thumb_vertical"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/tv_content"
+                    android:paddingLeft="@dimen/_5dp"
+                    android:paddingRight="@dimen/_5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/_14sp"/>
+            </android.support.v4.widget.NestedScrollView>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:orientation="vertical"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_height="wrap_content">
+
+                <android.support.design.widget.FloatingActionButton
+                    android:id="@+id/fab_top"
+                    android:layout_width="wrap_content"
+                    android:clickable="true"
+                    android:src="@drawable/top"
+                    android:tint="@color/colorPrimary"
+                    android:layout_margin="@dimen/_10dp"
+                    android:animateLayoutChanges="true"
+                    android:layout_height="wrap_content"/>
+
+                <android.support.design.widget.FloatingActionButton
+                    android:id="@+id/fab_bottom"
+                    android:layout_width="wrap_content"
+                    android:tint="@color/colorPrimary"
+                    android:clickable="true"
+                    android:src="@drawable/bottom"
+                    android:animateLayoutChanges="true"
+                    android:layout_margin="@dimen/_10dp"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+        </RelativeLayout>
 
     </com.ayvytr.customview.loading.StatusView>
 </LinearLayout>
