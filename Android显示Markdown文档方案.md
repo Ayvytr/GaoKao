@@ -22,3 +22,27 @@
     2. 多行公式的处理
     3. $ $的识别和处理
     4. $$ $同时存在时的配对和处理
+
+LaTeX库公式空格：
+quad空格，符号：\quad，如：$x \quad y$
+大空格，符号\，如：$x \ y$
+
+## LaTeX转换公式为图片发现的问题
+    Markwon库以源码形式引入了LaTeX库，其中JavaFontRenderingAtom等类被魔改，传入的某些字符串处理过程中会报空指针等异常。
+    解决方案：LaTeX传入公式字符串处理之前，先把全角字符转换为半角字符，代码如下：
+```java
+    public static String ToDBC(String input) {
+        char c[] = input.toCharArray();
+        for (int i = 0; i < c.length; i++) {
+            if (c[i] == '\u3000') {
+                c[i] = ' ';
+            } else if (c[i] > '\uFF00' && c[i] < '\uFF5F') {
+                c[i] = (char) (c[i] - 65248);
+
+            }
+        }
+        return new String(c);
+    }
+```
+
+
