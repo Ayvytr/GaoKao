@@ -84,12 +84,12 @@ class MarkdownActivity : BaseMvpActivity<IPresenter>() {
                 override fun configureImages(builder: AsyncDrawableLoader.Builder) {
 //                    builder.addSchemeHandler("",
 //                        OkHttpSchemeHandler(ApiClient.getInstance().okHttpClient, mContent!!))
-                    builder.errorDrawableProvider {
-                        getContext().resources.getDrawable(R.drawable.photo_error)
-                    }
-                    builder.placeholderDrawableProvider {
-                        getContext().resources.getDrawable(R.drawable.photo_loading)
-                    }
+//                    builder.errorDrawableProvider {
+//                        getContext().resources.getDrawable(R.drawable.photo_error)
+//                    }
+//                    builder.placeholderDrawableProvider {
+//                        getContext().resources.getDrawable(R.drawable.photo_loading)
+//                    }
                 }
             })
             .usePlugin(TablePlugin.create(getContext()))
@@ -107,7 +107,7 @@ class MarkdownActivity : BaseMvpActivity<IPresenter>() {
 //                    .fitCanvas(true)
 //                    .padding(dip(10))
 //            })
-            .usePlugin(JLatexMathPlugin.create(textSize))
+            .usePlugin(JLatexMathPlugin.create(tv_content.textSize))
             .build()
 
         if (mAppSubject.url!!.isUrl()) {
