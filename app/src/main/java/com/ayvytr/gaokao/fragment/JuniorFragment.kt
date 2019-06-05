@@ -4,7 +4,6 @@ import android.os.Bundle
 import com.ayvytr.commonlibrary.AppConfig
 import com.ayvytr.commonlibrary.constant.IntentConst
 import com.ayvytr.gaokao.MarkdownActivity
-import com.ayvytr.gaokao.MarkdownFormulaActivity
 import com.ayvytr.gaokao.R
 import com.ayvytr.gaokao.adapter.SubjectAdapter
 import com.ayvytr.mvp.IPresenter
@@ -30,11 +29,11 @@ class JuniorFragment : BaseMvpFragment<IPresenter>() {
         mAdapter = SubjectAdapter(context!!, AppConfig.getJuniorSubjects())
         mAdapter.setOnItemClickListener { view, holder, position ->
             val appSubject = mAdapter.getItemAt(position)
-            if (appSubject.hasFormula) {
-                startActivity<MarkdownFormulaActivity>(IntentConst.EXTRA_SUBJECT to appSubject)
-            } else {
+//            if (appSubject.hasFormula) {
+//                startActivity<MarkdownFormulaActivity>(IntentConst.EXTRA_SUBJECT to appSubject)
+//            } else {
                 startActivity<MarkdownActivity>(IntentConst.EXTRA_SUBJECT to appSubject)
-            }
+//            }
         }
         rv_main.adapter = mAdapter
     }

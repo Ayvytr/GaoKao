@@ -35,6 +35,7 @@
                     android:id="@+id/tv_content"
                     android:paddingLeft="@dimen/_5dp"
                     android:paddingRight="@dimen/_5dp"
+                    android:paddingBottom="@dimen/_160dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textSize="@dimen/_14sp"/>

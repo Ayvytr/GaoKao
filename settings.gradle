@@ -35,3 +35,6 @@ project (':commonmark-strikethrough').projectDir = new File("../commonmark-java/
 
 include ':commonmark-table'
 project (':commonmark-table').projectDir = new File("../commonmark-java/commonmark-ext-gfm-tables")
+
+include ':commonmark-test-util'
+project (':commonmark-test-util').projectDir = new File("../commonmark-java/commonmark-test-util")

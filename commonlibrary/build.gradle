@@ -111,7 +111,7 @@ dependencies {
     api project(":markwon-ext-tables")
     api project(":markwon-ext-latex")
 
-    api project(":FlexibleTv")
+//    api project(":FlexibleTv")
 
 //    api "com.vladsch.flexmark:flexmark:0.42.6"
 //    api "com.vladsch.flexmark:flexmark-util:0.42.6"

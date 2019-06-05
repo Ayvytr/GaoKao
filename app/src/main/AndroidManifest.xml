@@ -38,11 +38,6 @@
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:screenOrientation="portrait">
         </activity>
-        <activity
-            android:name=".MarkdownFormulaActivity"
-            android:configChanges="keyboardHidden|orientation|screenSize"
-            android:screenOrientation="portrait">
-        </activity>
 
         <meta-data
             android:name="QBSDKAppKey"
