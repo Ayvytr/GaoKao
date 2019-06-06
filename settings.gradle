@@ -27,14 +27,15 @@ project(':markwon-ext-latex').projectDir = new File("../Markwon/markwon-ext-late
 include ':markwon-ext-tables'
 project(':markwon-ext-tables').projectDir = new File("../Markwon/markwon-ext-tables")
 
+include ':markwon-test-span'
+project(':markwon-test-span').projectDir = new File("../Markwon/markwon-test-span")
+
 include ':commonmark'
 project (':commonmark').projectDir = new File("../commonmark-java/commonmark")
-
-include ':commonmark-strikethrough'
-project (':commonmark-strikethrough').projectDir = new File("../commonmark-java/commonmark-ext-gfm-strikethrough")
 
 include ':commonmark-table'
 project (':commonmark-table').projectDir = new File("../commonmark-java/commonmark-ext-gfm-tables")
 
 include ':commonmark-test-util'
 project (':commonmark-test-util').projectDir = new File("../commonmark-java/commonmark-test-util")
+
