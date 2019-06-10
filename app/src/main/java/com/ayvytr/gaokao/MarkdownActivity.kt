@@ -24,10 +24,10 @@ import org.jetbrains.anko.support.v4.onScrollChange
 import ru.noties.markwon.AbstractMarkwonPlugin
 import ru.noties.markwon.Markwon
 import ru.noties.markwon.MarkwonConfiguration
-import ru.noties.markwon.ext.latex.JLatexMathPlugin
-import ru.noties.markwon.ext.tables.TablePlugin
 import ru.noties.markwon.image.AsyncDrawableLoader
 import ru.noties.markwon.image.ImagesPlugin
+import ru.noties.markwon.plugins.latex.JLatexMathPlugin
+import ru.noties.markwon.plugins.table.TablePlugin
 import java.io.IOException
 
 

@@ -19,8 +19,8 @@ import okhttp3.Response
 import ru.noties.markwon.AbstractMarkwonPlugin
 import ru.noties.markwon.Markwon
 import ru.noties.markwon.MarkwonConfiguration
-import ru.noties.markwon.ext.tables.TablePlugin
 import ru.noties.markwon.image.AsyncDrawableLoader
+import ru.noties.markwon.plugins.table.TablePlugin
 import java.io.IOException
 
 

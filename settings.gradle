@@ -21,11 +21,11 @@ project(':mvp-rxlifecycle-kotlin').projectDir = new File("../ModularizationCompo
 include ':markwon-core'
 project(':markwon-core').projectDir = new File("../Markwon/markwon-core")
 
-include ':markwon-ext-latex'
-project(':markwon-ext-latex').projectDir = new File("../Markwon/markwon-ext-latex")
-
-include ':markwon-ext-tables'
-project(':markwon-ext-tables').projectDir = new File("../Markwon/markwon-ext-tables")
+//include ':markwon-ext-latex'
+//project(':markwon-ext-latex').projectDir = new File("../Markwon/markwon-ext-latex")
+//
+//include ':markwon-ext-tables'
+//project(':markwon-ext-tables').projectDir = new File("../Markwon/markwon-ext-tables")
 
 include ':markwon-test-span'
 project(':markwon-test-span').projectDir = new File("../Markwon/markwon-test-span")

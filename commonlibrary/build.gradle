@@ -108,8 +108,8 @@ dependencies {
 //    api "ru.noties.markwon:ext-latex:3.0.1"
 //    api "ru.noties.markwon:syntax-highlight:3.0.1"
     api project(":markwon-core")
-    api project(":markwon-ext-tables")
-    api project(":markwon-ext-latex")
+//    api project(":markwon-ext-tables")
+//    api project(":markwon-ext-latex")
 
 //    api project(":FlexibleTv")
 
