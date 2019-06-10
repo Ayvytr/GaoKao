@@ -33,6 +33,9 @@ project(':markwon-test-span').projectDir = new File("../Markwon/markwon-test-spa
 include ':commonmark'
 project (':commonmark').projectDir = new File("../commonmark-java/commonmark")
 
+include ':commonmark-autolink'
+project (':commonmark-autolink').projectDir = new File("../commonmark-java/commonmark-ext-autolink")
+
 include ':commonmark-table'
 project (':commonmark-table').projectDir = new File("../commonmark-java/commonmark-ext-gfm-tables")
 
