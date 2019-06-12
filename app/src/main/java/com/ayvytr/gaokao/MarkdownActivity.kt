@@ -127,6 +127,8 @@ class MarkdownActivity : BaseMvpActivity<IPresenter>() {
                         runOnUiThread {
                             if (response.isSuccessful) {
                                 markwon.setMarkdown(tv_content, response.body()!!.string(), mAppSubject.url!!)
+//                                markwon.setMarkdown(tv_content, "（3）求商比较法：设a、b是两正实数，$$\\frac{a}{b} > 1 \\Leftrightarrow a >\n" +
+//                                        "b;\\frac{a}{b} = 1 \\Leftrightarrow a = b;\\frac{a}{b} < 1 \\Leftrightarrow a < b;$$", mAppSubject.url!!)
                                 status_view.showContent()
 
 //                                L.e(tv_content.height, nsv.height)
