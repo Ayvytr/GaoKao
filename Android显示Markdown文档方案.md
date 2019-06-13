@@ -46,3 +46,12 @@ quad空格，符号：\quad，如：$x \quad y$
 ```
 
 
+
+## 采用过的库
+
+1. implementation 'us.feras.mdv:markdownview:1.1.0'
+
+   WebView加载Markdown。问题：无法处理相对链接图片，公式，表格
+
+2. 
+
