@@ -8,7 +8,7 @@ import android.view.MenuItem
 import com.ayvytr.gaokao.R
 import com.ayvytr.mvp.IPresenter
 import com.ayvytr.rxlifecycle.BaseMvpFragment
-import kotlinx.android.synthetic.main.fragment_main_navigatino.*
+import kotlinx.android.synthetic.main.fragment_main_navigation.*
 
 /**
  * @author admin
@@ -16,7 +16,7 @@ import kotlinx.android.synthetic.main.fragment_main_navigatino.*
 class MainNavigationFragment : BaseMvpFragment<IPresenter>(), BottomNavigationView.OnNavigationItemSelectedListener {
 
     override fun getContentViewRes(): Int {
-        return R.layout.fragment_main_navigatino
+        return R.layout.fragment_main_navigation
     }
 
     override fun initData(savedInstanceState: Bundle?) {

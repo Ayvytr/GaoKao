@@ -153,6 +153,8 @@ deps.debug = 'ru.noties:debug:3.0.0@jar'
 deps.adapt = 'ru.noties:adapt:1.1.0'
 deps.prism4j_bundler = 'ru.noties:prism4j-bundler:1.1.0'
 
+deps.markdown_view = "com.github.Ayvytr:MarkdownView:0.40.0"
+
 ext.deps = deps
 
 

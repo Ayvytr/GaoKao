@@ -14,14 +14,6 @@
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:screenOrientation="portrait">
         </activity>
-
-        <activity android:name=".activity.TbsFileActivity">
-        </activity>
-        <activity
-            android:name=".activity.TbsWebViewActivity"
-            android:configChanges="orientation|screenSize|keyboardHidden"
-            android:windowSoftInputMode="stateHidden|adjustResize">
-        </activity>
     </application>
 
 </manifest>

@@ -1,4 +1,4 @@
-include ':app', ':commonlibrary', ':FlexibleTv'
+include ':app', ':commonlibrary'
 
 include ':mvp-base'
 project(':mvp-base').projectDir = new File("../ModularizationComponent/mvp-base")
@@ -18,27 +18,4 @@ project(':mvp-baselist').projectDir = new File("../ModularizationComponent/mvp-b
 include ':mvp-rxlifecycle-kotlin'
 project(':mvp-rxlifecycle-kotlin').projectDir = new File("../ModularizationComponent/mvp-rxlifecycle-kotlin")
 
-include ':markwon-core'
-project(':markwon-core').projectDir = new File("../Markwon/markwon-core")
-
-//include ':markwon-ext-latex'
-//project(':markwon-ext-latex').projectDir = new File("../Markwon/markwon-ext-latex")
-//
-//include ':markwon-ext-tables'
-//project(':markwon-ext-tables').projectDir = new File("../Markwon/markwon-ext-tables")
-
-include ':markwon-test-span'
-project(':markwon-test-span').projectDir = new File("../Markwon/markwon-test-span")
-
-include ':commonmark'
-project (':commonmark').projectDir = new File("../commonmark-java/commonmark")
-
-include ':commonmark-autolink'
-project (':commonmark-autolink').projectDir = new File("../commonmark-java/commonmark-ext-autolink")
-
-include ':commonmark-table'
-project (':commonmark-table').projectDir = new File("../commonmark-java/commonmark-ext-gfm-tables")
-
-include ':commonmark-test-util'
-project (':commonmark-test-util').projectDir = new File("../commonmark-java/commonmark-test-util")
 

@@ -12,10 +12,6 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".markdown.CommonMark">
-        </activity>
-        <activity android:name=".markdown.Markwon"/>
-
 
         <activity
             android:name=".SplashActivity"
